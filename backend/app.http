@@ -1,0 +1,40 @@
+###
+GET http://localhost:3000/
+
+
+###
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "jomhn.doe@example.com",
+  "password": "securepassword123"
+}
+
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  
+  "email": "john.doe@example.com",
+  "password": "securepassword123"
+}
+
+###
+POST  http://localhost:3000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczMzczNzUyMywiZXhwIjoxNzMzODIzOTIzfQ.f2oTqoCrKv8DOR-_CHuEEUvLcV2PshcJfkDSW2OphOE
+
+{
+  "title": "Finish the project",
+  "description": "Complete the backend and frontend integration",
+  "status": "in-progress"
+}
+
+###
+
+GET  http://localhost:3000/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huLmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczMzczNzUyMywiZXhwIjoxNzMzODIzOTIzfQ.f2oTqoCrKv8DOR-_CHuEEUvLcV2PshcJfkDSW2OphOE
